@@ -1,17 +1,54 @@
+/* The general style, basic style */
 *{
     box-sizing: content-box;
     padding: 0;
     margin: 0;
 }
+/* A media querie that style large mobile phones */
 @media screen and (max-width: 380px){
     .image{
-        width: 380px;
+        width: 50vw;
     }
     .imageBox{
-        border: 1px solid black;
         width: 190px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
+    .presentationBox{
+        padding: 10px;
+    }
+
 }
+/*
+ --Styling the general layout of the website in the first screen, the home
+*/
+.image{
+    object-fit: cover;
+    border: 1px solid red;
+}
+.imageBox{
+    display: flex;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: imageBox;
+}
+/* 
+Styling the hole box that contains the presentation of the website and its system
+ */
+.presentationBox{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    grid-area: presentationBox;
+}
+
+.contentBox{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'presentationBox imageBox';
+}
+
