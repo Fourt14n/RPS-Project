@@ -13,20 +13,25 @@
         width: 190px;
     }
     .presentationBox{
-        padding: 10px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid white;
     }
+    .contentBox{
+        background-image: url(./assets/Background_mobile.svg);
+        background-repeat: no-repeat;
 
+    }
 }
 /*
  --Styling the general layout of the website in the first screen, the home
 */
 .image{
     object-fit: cover;
-    border: 1px solid red;
 }
 .imageBox{
     display: flex;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,12 +42,14 @@
 Styling the hole box that contains the presentation of the website and its system
  */
 .presentationBox{
+    font-family: "Jersey 15", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     grid-area: presentationBox;
+    color: white;
 }
 
 .contentBox{
