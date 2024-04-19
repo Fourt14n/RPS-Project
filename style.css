@@ -4,16 +4,25 @@
     padding: 0;
     margin: 0;
 }
-/* A media querie that style large mobile phones */
-@media screen and (max-width: 380px){
+
+.screenBox{
+    --font_size_mobile: 6vw;
+    --width_image_mobile: 50vw;
+}
+
+/* 
+---------------------------------------------------- 
+Down here, the style of the first screen of the page
+----------------------------------------------------
+*/
+
+@media screen and (min-width: 250px) and (max-width: 500px) {
+
     .image{
-        width: 50vw;
-    }
-    .imageBox{
-        width: 190px;
+        width: var(--width_image_mobile);
     }
     .presentationBox{
-        font-size: 1.3rem;
+        font-size: var(--font_size_mobile);
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -33,6 +42,7 @@
         border: 0.001rem solid white;
     }
 }
+
 /*
  --Styling the general layout of the website in the first screen, the home
 */
@@ -47,6 +57,8 @@
     align-items: center;
     grid-area: imageBox;
 }
+
+
 /* 
 Styling the hole box that contains the presentation of the website and its system
  */
@@ -75,3 +87,14 @@ Styling the hole box that contains the presentation of the website and its syste
 .buttonBox:hover{
     background-color: rgba(240, 248, 255, 0.31);
 }
+
+
+
+
+
+
+/* 
+---------------------------------------------------
+Down here, styling the second screen of the website
+---------------------------------------------------
+*/
