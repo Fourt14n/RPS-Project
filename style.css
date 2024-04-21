@@ -4,42 +4,69 @@
     padding: 0;
     margin: 0;
 }
-
-.screenBox{
-    --font_size_mobile: 6vw;
-    --width_image_mobile: 50vw;
-}
-
 /* 
 ---------------------------------------------------- 
 Down here, the style of the first screen of the page
 ----------------------------------------------------
 */
-
-@media screen and (min-width: 250px) and (max-width: 500px) {
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
 
     .image{
-        width: var(--width_image_mobile);
+        width: 40vw;
     }
     .presentationBox{
-        font-size: var(--font_size_mobile);
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .contentBox{
-        background-image: url(./assets/Background_mobile.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        font-size: 6vw;
     }
     .resumeBox{
         padding: 0.5rem;
         padding-bottom: 0.9rem;
     }
     .buttonBox{
-        padding: 0.5rem 1.5rem;
-        border-radius: 0.3rem;
-        border: 0.001rem solid white;
+        width: 13vw;
+        padding: 2vw 6vw;
+        border-radius: 1vb;
+        border: 0.01vb solid white;
+    }
+}
+
+/* Down here, the media querie for small tablets and devices with small screens */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .image{
+        width: 30vw;
+    }
+    .presentationBox{
+        font-size: 4.8vw;
+    }
+    .resumeBox{
+        padding: 1rem 2rem 1rem 2rem;
+    }
+    .buttonBox{
+        width: 13vw;
+        padding: 2vw 6vw;
+        border-radius: 1vb;
+        border: 0.01vb solid white;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .image{
+        width: 15vw;
+    }
+    .presentationBox{
+        font-size: 1.7vw;
+    }
+    .resumeBox{
+        font-size: 2vw;
+        padding: 0.5rem 2rem 1rem 2rem;
+    }
+    .buttonBox{
+        text-align: center;
+        width: 4vw;
+        padding: 1vw 4vw;
+        border-radius: 1vb;
+        border: 0.01vb solid white;
     }
 }
 
@@ -51,13 +78,12 @@ Down here, the style of the first screen of the page
 }
 .imageBox{
     display: flex;
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     grid-area: imageBox;
 }
-
 
 /* 
 Styling the hole box that contains the presentation of the website and its system
@@ -66,9 +92,9 @@ Styling the hole box that contains the presentation of the website and its syste
     font-family: "Jersey 15", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    text-align: center;
     grid-area: presentationBox;
     color: rgb(215, 228, 235);
 }
@@ -78,6 +104,9 @@ Styling the hole box that contains the presentation of the website and its syste
     height: 100vh;
     display: grid;
     grid-template-areas: 'presentationBox imageBox';
+    background-image: url(./assets/Background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: black;
 }
 
