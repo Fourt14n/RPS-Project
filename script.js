@@ -59,6 +59,7 @@ playButton.addEventListener("click", e => {
     rockRadio.setAttribute("value", "rock") 
     rockRadio.setAttribute("id", "rock")
     rockLabel.innerText = "Pedra";
+    rockLabel.setAttribute("class", "choises");
     rockDiv.append(rockLabel)
     rockLabel.setAttribute("for", "rock")
 
@@ -69,6 +70,7 @@ playButton.addEventListener("click", e => {
     paperRadio.setAttribute("name", "choise")
     paperRadio.setAttribute("value", "paper")
     paperLabel.innerText = "Papel";
+    paperLabel.setAttribute("class", "choises");
     paperDiv.append(paperLabel)
     paperLabel.setAttribute("for", "paper")
 
@@ -79,11 +81,18 @@ playButton.addEventListener("click", e => {
     scissorsRadio.setAttribute("name", "choise")
     scissorsRadio.setAttribute("value", "scissors")
     scissorsLabel.innerText = "Tesoura";
+    scissorsLabel.setAttribute("class", "choises");
     scissorsDiv.append(scissorsLabel)
     scissorsLabel.setAttribute("for", "scissors")
 
     button.textContent = "Escolher"
+    
 
-
-}, {once: true})
+    let inputs = document.getElementsByClassName("choises")
+    form.addEventListener("click", e => {
+        console.log("Funcionando")
+        e.stopPropagation()
+    })
+    
+},  {once: true})
 
