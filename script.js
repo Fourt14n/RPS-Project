@@ -87,13 +87,13 @@ playButton.addEventListener("click", e => {
 
     button.textContent = "Escolher"
     
-
+    e.stopPropagation()
     let inputs = document.getElementsByClassName("choises")
     form.addEventListener("click", e => {
         console.log("Funcionando")
         e.stopPropagation()
     })
 
-    e.stopPropagation()
+
 },  {once: true})
 
