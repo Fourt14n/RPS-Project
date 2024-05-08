@@ -92,7 +92,7 @@ playButton.addEventListener("click", e => {
     form.addEventListener("click", e => {
         console.log("Funcionando")
         e.stopPropagation()
-    })
+    }{once: true})
     
 },  {once: true})
 
