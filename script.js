@@ -86,13 +86,15 @@ playButton.addEventListener("click", e => {
     scissorsLabel.setAttribute("for", "scissors")
 
     button.textContent = "Escolher"
-    
 
-    let inputs = document.getElementsByClassName("choises")
-    form.addEventListener("click", e => {
-        console.log("Funcionando")
-        e.stopPropagation()
+    form.addEventListener("change", e => {
+        let parent = e.target.parentElement
+        if(e.target.checked === true){
+            parent.style.backgroundColor = "rgba(240, 248, 255, 0.31)";
+        }else if(e.target === false){
+            parent.style.backgroundColor = "rgba(240, 248, 255, 0.148)";
+        }
     })
-    
-},  {once: true})
+
+}, {once: true})
 
