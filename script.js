@@ -88,13 +88,13 @@ playButton.addEventListener("click", e => {
     button.textContent = "Escolher"
 
     form.addEventListener("change", e => {
-        let parent = e.target.parentElement
-        if(e.target.checked === true){
-            parent.style.backgroundColor = "rgba(240, 248, 255, 0.31)";
-        }else if(e.target === false){
-            parent.style.backgroundColor = "rgba(240, 248, 255, 0.148)";
-        }
-    })
+    let parent = e.target.parentElement
+    if(e.target.checked === true){
+        parent.style.backgroundColor = "rgba(240, 248, 255, 0.31)";
+    }else if(e.target === false){
+        parent.style.backgroundColor = "rgba(240, 248, 255, 0.148)";
+    }
+})
 
 }, {once: true})
 
