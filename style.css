@@ -1,8 +1,14 @@
+:root{
+    --fontSize_mobilePhones: 6vw;
+}
+
 /* The general style, basic style */
 *{
     box-sizing: content-box;
     padding: 0;
     margin: 0;
+    color: rgb(215, 228, 235);
+    font-family: "Jersey 15", Arial, Helvetica, sans-serif;
 }
 /* 
 ---------------------------------------------------- 
@@ -16,7 +22,7 @@ Down here, the style of the first screen of the page
         width: 40vw;
     }
     .presentationBox{
-        font-size: 6vw;
+        font-size: var(--fontSize_mobilePhones);
     }
     .resumeBox{
         padding: 0.5rem;
@@ -89,27 +95,32 @@ Down here, the style of the first screen of the page
 Styling the hole box that contains the presentation of the website and its system
  */
 .presentationBox{
-    font-family: "Jersey 15", Arial, Helvetica, sans-serif;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     grid-area: presentationBox;
-    color: rgb(215, 228, 235);
+    
 }
 
-.contentBox{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 'presentationBox imageBox';
+
+
+.screenBox{
     background-image: url(./assets/Background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
 }
 
+.firstScreen{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'presentationBox imageBox';
+
+}
 .buttonBox{
     background-color: rgba(240, 248, 255, 0.205);
 }
@@ -127,3 +138,22 @@ Styling the hole box that contains the presentation of the website and its syste
 Down here, styling the second screen of the website
 ---------------------------------------------------
 */
+
+.firstScreen{
+    /* display: none; */
+}
+
+.secondScreen{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.inputsDiv{
+    background-color: red;
+}
+
+.chooseButton{
+    color: black;
+}
