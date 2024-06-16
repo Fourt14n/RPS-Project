@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="screenBox">
-        <div class="contentBox">
+        <div class="firstScreen">
             <div class="imageBox">
                 <img class="image" src="./assets/robozin.svg" alt="An image of a cartoonized robot smilling">
             </div>
@@ -30,6 +30,34 @@
                     <div class="buttonDiv">
                         <a id="button">Jogar</a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondScreen">
+            <div class="choisesBox">
+                <p>Selecione qual será sua jogada:</p>
+
+                <div class="inputsContainer">
+                    <div class="inputsDiv" id="rockDiv">
+                       Pedra
+                       <input hidden class="inputs" type="radio" name="choises" value="rock" id="rock">
+                    </div>
+
+                    <div class="inputsDiv" id="paperDiv">
+                        Papel
+                        <input hidden class="inputs" type="radio" name="choises" value="paper" id="paper">
+                    </div>
+
+                    <div class="inputsDiv" id="scissorDiv">
+                        Tesoura
+                        <input hidden class="inputs" type="radio" name="choises" value="scissor" id="scissor">
+                    </div>
+
+                    <button type="submit" class="chooseButton">
+                        Escolher
+                    </button>
+
                 </div>
             </div>
         </div>
