@@ -98,33 +98,6 @@ Down here, the style of the first screen of the page
 
     /* Styling the second screen */
 
-    #choisesForm{
-        gap: 3%;
-    }
-
-    .choisesDiv{
-        padding-bottom: 3%;
-    }
-
-    #rockDiv, #scissorsDiv, #paperDiv{
-        padding: 2vh 3vw;
-    }
-
-    #rockDiv:hover, #scissorsDiv:hover, #paperDiv:hover{
-        background-color: rgba(240, 248, 255, 0.31);
-    }
-
-    .presentationBox{
-        height: 50%;
-        width: 60%;
-    }
-
-    .buttonBox{
-        text-align: center;
-    }
-    
-}
-
 /*
  --Styling the general layout of the website in the first screen, the home
 */
@@ -210,4 +183,31 @@ Down here, styling the second screen of the website
 
 #rockDiv, #scissorsDiv, #paperDiv{
     border-radius: 4%;
+}
+
+#choisesForm{
+    gap: 3%;
+}
+
+.choisesDiv{
+    padding-bottom: 3%;
+}
+
+#rockDiv, #scissorsDiv, #paperDiv{
+    padding: 2vh 3vw;
+}
+
+#rockDiv:hover, #scissorsDiv:hover, #paperDiv:hover{
+    background-color: rgba(240, 248, 255, 0.31);
+}
+
+.presentationBox{
+    height: 50%;
+    width: 60%;
+}
+
+.buttonBox{
+    text-align: center;
+}
+
 }
