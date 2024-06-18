@@ -146,7 +146,8 @@ Down here, styling the second screen of the website
 }
 
 .secondScreen{
-    display: flex;
+    display: grid;
+    grid-template-areas: 'choisesBox imageBox';
     width: 100vw;
     height: 100vh;
     /* display: none; */
@@ -163,8 +164,17 @@ Down here, styling the second screen of the website
 }
 
 .choisesBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(240, 248, 255, 0.075);
     border: 1px solid rgba(240, 248, 255, 0.3);
+    grid-area: choisesBox;
+}
+
+.inputsContainer{
+    display: flex;
 }
 
 /* Media query for mobile phones */
