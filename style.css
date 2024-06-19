@@ -1,7 +1,8 @@
 :root{
     --fontSize_mobilePhones: 6vw;
     --fontSize_smallTablets: 4.8vw;
-    --fontSize_laptops: 1.7vw;
+    --fontSize_laptops: 1.9vw;
+    --padding_mobileAndSmallTablets: 2vw 6vw;
 }
 
 /* The general style, basic style */
@@ -150,17 +151,30 @@ Down here, styling the second screen of the website
     grid-template-areas: 'choisesBox imageBox';
     width: 100vw;
     height: 100vh;
+    place-items: center;
     /* display: none; */
 }
 
 .inputsButton{
+    padding: 2vh 3vw;
+    border-radius: 3%;
+}
+
+.inputsButton:hover{
     background-color: rgba(240, 248, 255, 0.148);
+    cursor: pointer;
 }
 
 .chooseButton{
+    border-radius: 6%;
+    background-color: rgba(250, 250, 250, 0.047);
+    border: 0.001px solid white;
+}
+
+.chooseButton:hover{
     background-color: rgba(240, 248, 255, 0.148);
     border: 0.001px solid white;
-    border-radius: 6%;
+    cursor: pointer;
 }
 
 .choisesBox{
@@ -171,10 +185,20 @@ Down here, styling the second screen of the website
     background-color: rgba(240, 248, 255, 0.075);
     border: 1px solid rgba(240, 248, 255, 0.3);
     grid-area: choisesBox;
+    text-align: center;
+    box-sizing: border-box;
+    width: 70%;
+    height: 60%;
 }
 
 .inputsContainer{
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.choisesBox , .chooseButton{
+    row-gap: 5%;
 }
 
 /* Media query for mobile phones */
@@ -189,6 +213,18 @@ Down here, styling the second screen of the website
 
     .chooseButton{
         font-size: var(--fontSize_mobilePhones);
+        padding: var(--padding_mobileAndSmallTablets);
+    }
+    .imageBox{
+        display: none;
+    }
+    .secondScreen{
+        display: flex;
+        margin: auto auto;
+        justify-content: center;
+    }
+    .choisesBox{
+        width: 80%;
     }
 }
 
@@ -205,7 +241,13 @@ Down here, styling the second screen of the website
 
     .chooseButton{
         font-size: var(--fontSize_smallTablets);
+        padding: var(--padding_mobileAndSmallTablets);
     }
+    .choisesBox{
+        width: 95%;
+        height: 50%;
+    }
+    
 }
 
 @media screen and (min-width: 1025px) {
@@ -219,5 +261,7 @@ Down here, styling the second screen of the website
 
     .chooseButton{
         font-size: var(--fontSize_laptops);
+        padding: 1vw 4vw;
     }
+
 }
