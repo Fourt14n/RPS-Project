@@ -221,12 +221,10 @@ Down here, styling the second screen of the website
         display: none;
     }
     .secondScreen{
-        display: flex;
-        margin: auto auto;
         justify-content: center;
     }
     .choisesBox{
-        width: 80%;
+        width: 80vw;
     }
 }
 
