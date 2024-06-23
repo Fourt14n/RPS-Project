@@ -95,7 +95,7 @@ Down here, the style of the first screen of the page
         justify-content: center;
         align-items: center;
     }
-
+}
     /* Styling the second screen */
 
 /*
@@ -176,38 +176,73 @@ Down here, styling the second screen of the website
 
 #choisesForm{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-#rockDiv, #scissorsDiv, #paperDiv{
-    border-radius: 4%;
+.choisesBox , .chooseButton{
+    row-gap: 5%;
 }
 
-#choisesForm{
-    gap: 3%;
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .presentChooses{
+        font-size: var(--fontSize_mobilePhones);
+    }
+
+    .inputsButton{
+        font-size: var(--fontSize_mobilePhones);
+    }
+
+    .chooseButton{
+        font-size: var(--fontSize_mobilePhones);
+        padding: var(--padding_mobileAndSmallTablets);
+    }
+    .imageBox{
+        display: none;
+    }
+    .secondScreen{
+        justify-content: center;
+    }
+    .choisesBox{
+        width: 80vw;
+    }
 }
 
-.choisesDiv{
-    padding-bottom: 3%;
+/* Down here, the media querie for small tablets and devices with small screens */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .presentChooses{
+        font-size: var(--fontSize_smallTablets);
+    }
+
+    .inputsButton{
+        font-size: var(--fontSize_smallTablets);
+    }
+
+    .chooseButton{
+        font-size: var(--fontSize_smallTablets);
+        padding: var(--padding_mobileAndSmallTablets);
+    }
+    .choisesBox{
+        width: 95%;
+        height: 50%;
+    }
+    
 }
 
-#rockDiv, #scissorsDiv, #paperDiv{
-    padding: 2vh 3vw;
-}
+@media screen and (min-width: 1025px) {
+    .presentChooses{
+        font-size: var(--fontSize_laptops);
+    }
+    
+    .inputsButton{
+        font-size: var(--fontSize_laptops);
+    }
 
-#rockDiv:hover, #scissorsDiv:hover, #paperDiv:hover{
-    background-color: rgba(240, 248, 255, 0.31);
-}
-
-.presentationBox{
-    height: 50%;
-    width: 60%;
-}
-
-.buttonBox{
-    text-align: center;
-}
+    .chooseButton{
+        font-size: var(--fontSize_laptops);
+        padding: 1vw 4vw;
+    }
 
 }
