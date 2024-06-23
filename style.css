@@ -126,9 +126,11 @@ Styling the hole box that contains the presentation of the website and its syste
 }
 .buttonBox{
     background-color: rgba(240, 248, 255, 0.205);
+    cursor: pointer;
 }
 .buttonBox:hover{
     background-color: rgba(240, 248, 255, 0.31);
+    
 }
 
 
@@ -143,7 +145,7 @@ Down here, styling the second screen of the website
 */
 
 .firstScreen{
-    display: none;
+    /* display: none; */
 }
 
 .secondScreen{
@@ -152,7 +154,7 @@ Down here, styling the second screen of the website
     width: 100vw;
     height: 100vh;
     place-items: center;
-    /* display: none; */
+    display: none;
 }
 
 .inputsButton{
