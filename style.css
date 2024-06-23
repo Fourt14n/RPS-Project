@@ -1,8 +1,17 @@
+:root{
+    --fontSize_mobilePhones: 6vw;
+    --fontSize_smallTablets: 4.8vw;
+    --fontSize_laptops: 1.9vw;
+    --padding_mobileAndSmallTablets: 2vw 6vw;
+}
+
 /* The general style, basic style */
 *{
     box-sizing: content-box;
     padding: 0;
     margin: 0;
+    color: rgb(215, 228, 235);
+    font-family: "Jersey 15", Arial, Helvetica, sans-serif;
 }
 /* 
 ---------------------------------------------------- 
@@ -16,7 +25,7 @@ Down here, the style of the first screen of the page
         width: 40vw;
     }
     .presentationBox{
-        font-size: 6vw;
+        font-size: var(--fontSize_mobilePhones);
     }
     .resumeBox{
         padding: 0.5rem;
@@ -45,7 +54,7 @@ Down here, the style of the first screen of the page
         width: 30vw;
     }
     .presentationBox{
-        font-size: 4.8vw;
+        font-size: var(--fontSize_smallTablets);
     }
     .resumeBox{
         padding: 1rem 2rem 1rem 2rem;
@@ -72,7 +81,7 @@ Down here, the style of the first screen of the page
         width: 15vw;
     }
     .presentationBox{
-        font-size: 1.7vw;
+        font-size: var(--fontSize_laptops);
     }
     .resumeBox{
         font-size: 2vw;
@@ -123,27 +132,32 @@ Styling the hole box that contains the presentation of the website and its syste
 }
 
 .presentationBox{
-    font-family: "Jersey 15", Arial, Helvetica, sans-serif;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     grid-area: presentationBox;
-    color: rgb(215, 228, 235);
+    
 }
 
-.contentBox{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 'presentationBox imageBox';
+
+
+.screenBox{
     background-image: url(./assets/Background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
 }
 
+.firstScreen{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'presentationBox imageBox';
+
+}
 .buttonBox{
     background-color: rgba(240, 248, 255, 0.148);
     font-family: "Jersey 15", Arial, Helvetica, sans-serif;
@@ -151,6 +165,7 @@ Styling the hole box that contains the presentation of the website and its syste
 }
 .buttonBox:hover{
     background-color: rgba(240, 248, 255, 0.31);
+    
 }
 
 
@@ -161,53 +176,127 @@ Down here, styling the second screen of the website
 ---------------------------------------------------
 */
 
-.choisesDiv{
+.firstScreen{
+    /* display: none; */
+}
+
+.secondScreen{
+    display: grid;
+    grid-template-areas: 'choisesBox imageBox';
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    display: none;
+}
+
+.inputsButton{
+    padding: 2vh 3vw;
+    border-radius: 3%;
+}
+
+.inputsButton:hover{
+    background-color: rgba(240, 248, 255, 0.148);
+    cursor: pointer;
+}
+
+.chooseButton{
+    border-radius: 6%;
+    background-color: rgba(250, 250, 250, 0.047);
+    border: 0.001px solid white;
+}
+
+.chooseButton:hover{
+    background-color: rgba(240, 248, 255, 0.148);
+    border: 0.001px solid white;
+    cursor: pointer;
+}
+
+.choisesBox{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.075);
+    border: 1px solid rgba(240, 248, 255, 0.3);
+    grid-area: choisesBox;
     text-align: center;
+    box-sizing: border-box;
+    width: 70%;
+    height: 60%;
+}
+
+.inputsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.choisesBox , .chooseButton{
+    row-gap: 5%;
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .presentChooses{
+        font-size: var(--fontSize_mobilePhones);
+    }
+
+    .inputsButton{
+        font-size: var(--fontSize_mobilePhones);
+    }
+
+    .chooseButton{
+        font-size: var(--fontSize_mobilePhones);
+        padding: var(--padding_mobileAndSmallTablets);
+    }
+    .imageBox{
+        display: none;
+    }
+    .secondScreen{
+        display: flex;
+        margin: auto auto;
+        justify-content: center;
+    }
+    .choisesBox{
+        width: 80%;
+    }
+}
+
+/* Down here, the media querie for small tablets and devices with small screens */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .presentChooses{
+        font-size: var(--fontSize_smallTablets);
+    }
+
+    .inputsButton{
+        font-size: var(--fontSize_smallTablets);
+    }
+
+    .chooseButton{
+        font-size: var(--fontSize_smallTablets);
+        padding: var(--padding_mobileAndSmallTablets);
+    }
+    .choisesBox{
+        width: 95%;
+        height: 50%;
+    }
     
 }
 
-#presentationBox{
-    background-color: rgba(240, 248, 255, 0.075);
-    border: 1px solid rgba(240, 248, 255, 0.3);
-}
+@media screen and (min-width: 1025px) {
+    .presentChooses{
+        font-size: var(--fontSize_laptops);
+    }
+    
+    .inputsButton{
+        font-size: var(--fontSize_laptops);
+    }
 
-#choisesForm{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
+    .chooseButton{
+        font-size: var(--fontSize_laptops);
+        padding: 1vw 4vw;
+    }
 
-#rockDiv, #scissorsDiv, #paperDiv{
-    border-radius: 4%;
 }
-
-#choisesForm{
-    gap: 3%;
-}
-
-.choisesDiv{
-    padding-bottom: 3%;
-}
-
-#rockDiv, #scissorsDiv, #paperDiv{
-    padding: 2vh 3vw;
-}
-
-#rockDiv:hover, #scissorsDiv:hover, #paperDiv:hover{
-    background-color: rgba(240, 248, 255, 0.31);
-}
-
-.presentationBox{
-    height: 50%;
-    width: 60%;
-}
-
-.buttonBox{
-    text-align: center;
-}
-
 }
