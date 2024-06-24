@@ -265,3 +265,26 @@ Down here, styling the second screen of the website
     }
 
 }
+
+/*  ---------------------------------------------------------- 
+        Down here the styling of the third screen
+    ----------------------------------------------------------
+*/
+
+.thinkingBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.075);
+    border: 1px solid rgba(240, 248, 255, 0.3);
+    width: 50%;
+    height: 60%;
+}
+
+#thirdScreen{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
