@@ -43,3 +43,18 @@ scissorDiv.addEventListener("click", e => {
     document.querySelector("#scissor").setAttribute("checked", true)
 })
 
+const chooseButton = document.querySelector(".chooseButton")
+
+chooseButton.addEventListener("click", changeThirdScreen);
+
+function changeThirdScreen(){
+    const allChooses = document.querySelectorAll(".inputs");
+
+    if(allChooses[0].checked || allChooses[1].checked || allChooses[2].checked){
+        document.querySelector(".secondScreen").style.display = "none";
+        document.querySelector("#thirdScreen").style.display = "flex";
+    }else{
+        window.alert("Selecione alguma opção")
+    }
+
+}
