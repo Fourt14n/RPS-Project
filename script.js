@@ -54,7 +54,28 @@ function changeThirdScreen(){
         document.querySelector(".secondScreen").style.display = "none";
         document.querySelector("#thirdScreen").style.display = "flex";
     }else{
-        window.alert("Selecione alguma opção")
+        
+        let chooseButton = document.querySelectorAll(".inputsButton")
+        // Oh eu to tentando fazer um código pra fazer com que o texto da presentChooses fique piscando em vermelho por um tempo, provavelmente vou ter que fazer uma função por fora e chamar ela aqui
+        piscar();
     }
 
+    function piscar(){
+        let dontChoose = document.querySelector(".presentChooses");
+
+            let interval = setInterval(() =>{
+                setTimeout(() => {
+                    dontChoose.style.color = "red";   
+                })
+                setTimeout(()=> {
+                    dontChoose.style.color = "rgb(215, 228, 235)";   
+                },230)
+            })
+
+            setTimeout(() => {
+                clearInterval(interval);
+            }, 230)
+        
+    }
+    
 }
