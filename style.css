@@ -289,6 +289,22 @@ Down here, styling the second screen of the website
     height: 100vh;
 }
 
+@media screen and (max-width: 480px) {
+    .thinkingBox{
+        width: 80%;
+        height: 60%;
+    }
+}
+
+/* Down here, the media querie for small tablets and devices with small screens */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .thinkingBox{
+        width: 80%;
+        height: 70%;
+    }
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     aspect-ratio: 4;
@@ -340,7 +356,7 @@ Down here, styling the second screen of the website
 @media screen and (max-width: 480px) {
     #resultBox{
         width: 80%;
-        height: 70%;
+        height: 60%;
         gap: 30px;
     }
 
