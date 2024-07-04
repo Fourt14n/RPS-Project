@@ -78,4 +78,12 @@ function changeThirdScreen(){
         
     }
     
+    setTimeout(() => {
+       changeLastScreen();
+    },3000)
+}
+
+function changeLastScreen(){
+    document.querySelector("#thirdScreen").style.display = "none";
+    document.querySelector("#fourScreen").style.display = "flex";
 }

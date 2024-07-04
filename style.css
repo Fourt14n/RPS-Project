@@ -288,3 +288,21 @@ Down here, styling the second screen of the website
     width: 100vw;
     height: 100vh;
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    aspect-ratio: 4;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 0.7s steps(4) infinite;
+  }
+  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+
+
+  /* ---------------------------------------------------- */
+  /* Down here the stilization of the four screen, the last one */
+  /* ---------------------------------------------------- */
+
+#fourScreen{
+    display: none;
+    
+}
