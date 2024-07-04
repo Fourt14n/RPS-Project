@@ -147,11 +147,11 @@ function changeLastScreen(){
 
     document.querySelector("#tryAgainBtn").addEventListener("click", ()=>{
         document.querySelector("#fourScreen").style.display = "none";
-        document.querySelector(".secondScreen").style.display = "flex";
+        document.querySelector(".secondScreen").style.display = "grid";
     })
 
     document.querySelector("#homeBtn").addEventListener("click", () => {
         document.querySelector("#fourScreen").style.display = "none";
-        document.querySelector(".firstScreen").style.display = "flex";
+        document.querySelector(".firstScreen").style.display = "grid";
     })
 }
