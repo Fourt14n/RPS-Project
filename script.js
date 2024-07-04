@@ -53,9 +53,12 @@ function changeThirdScreen(){
     if(allChooses[0].checked || allChooses[1].checked || allChooses[2].checked){
         document.querySelector(".secondScreen").style.display = "none";
         document.querySelector("#thirdScreen").style.display = "flex";
+
+        setTimeout(()=> {
+            changeLastScreen();
+        }, 2500)
+
     }else{
-        
-        let chooseButton = document.querySelectorAll(".inputsButton")
         // Oh eu to tentando fazer um código pra fazer com que o texto da presentChooses fique piscando em vermelho por um tempo, provavelmente vou ter que fazer uma função por fora e chamar ela aqui
         piscar();
     }
@@ -77,13 +80,78 @@ function changeThirdScreen(){
             }, 230)
         
     }
-    
-    setTimeout(() => {
-       changeLastScreen();
-    },3000)
+
+    if(allChooses[0].checked){
+        choosedValue = "Pedra";
+
+    } else if(allChooses[1].checked){
+        choosedValue = "Papel";
+    }else if(allChooses[2]){
+        choosedValue = "Tesoura";
+    }else{
+        choosedValue = "Levar rola";
+    }
+
+
 }
 
 function changeLastScreen(){
     document.querySelector("#thirdScreen").style.display = "none";
     document.querySelector("#fourScreen").style.display = "flex";
+
+    // Dow here I'll do the logic behind the choose of the RPS
+    let randomicNumber = Math.floor(Math.random() * 99);
+    randomicNumber -= 1;
+    console.log(randomicNumber)
+    let rpsMsg;
+    const drawMsg = "Empate, que azar!";
+    const winMsg = "Você venceu!"
+    const loseMsg = "Você perdeu..."
+
+    if(randomicNumber <= 33){
+        //Pedra
+        rpsMsg = "Pedra"
+
+        if(choosedValue === "Pedra"){
+            document.querySelector("#winnerResult").innerHTML = drawMsg;
+        }else if(choosedValue === "Papel"){
+            document.querySelector("#winnerResult").innerHTML = winMsg;
+        }else if(choosedValue === "Tesoura"){
+            document.querySelector("#winnerResult").innerHTML = loseMsg;
+        }
+    }else if(randomicNumber <= 66){
+        // Papel
+        rpsMsg = "Papel"
+
+        if(choosedValue === "Pedra"){
+            document.querySelector("#winnerResult").innerHTML = loseMsg;
+        }else if(choosedValue === "Papel"){
+            document.querySelector("#winnerResult").innerHTML = drawMsg;
+        }else if(choosedValue === "Tesoura"){
+            document.querySelector("#winnerResult").innerHTML = winMsg;
+        }
+    }else if(randomicNumber <= 99){
+         // Tesoura
+        rpsMsg = "Tesoura"
+        if(choosedValue === "Pedra"){
+            document.querySelector("#winnerResult").innerHTML = winMsg;
+        }else if(choosedValue === "Papel"){
+            document.querySelector("#winnerResult").innerHTML = loseMsg;
+        }else if(choosedValue === "Tesoura"){
+            document.querySelector("#winnerResult").innerHTML = drawMsg;
+        }
+    }
+
+    document.querySelector("#yourChoose").innerHTML = "Você escolheu: " + choosedValue;
+    document.querySelector("#rpsChoose").innerHTML = "RPS escolheu: " + rpsMsg;
+
+    document.querySelector("#tryAgainBtn").addEventListener("click", ()=>{
+        document.querySelector("#fourScreen").style.display = "none";
+        document.querySelector(".secondScreen").style.display = "flex";
+    })
+
+    document.querySelector("#homeBtn").addEventListener("click", () => {
+        document.querySelector("#fourScreen").style.display = "none";
+        document.querySelector(".firstScreen").style.display = "flex";
+    })
 }
