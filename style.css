@@ -304,5 +304,133 @@ Down here, styling the second screen of the website
 
 #fourScreen{
     display: none;
-    
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#resultBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.075);
+    border: 1px solid rgba(240, 248, 255, 0.3);
+}
+
+.lastButtons{
+    background-color: rgba(250, 250, 250, 0.047);
+    border: 0.001px solid white;   
+}
+
+.lastButtons:hover{
+    background-color: rgba(240, 248, 255, 0.148);
+    border: 0.001px solid white;
+    cursor: pointer;
+}
+
+#resultTexts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    #resultBox{
+        width: 80%;
+        height: 70%;
+        gap: 30px;
+    }
+
+    #resultTexts{
+        gap: 20px;
+    }
+
+    #winnerResult{
+        font-size: var(--fontSize_mobilePhones);
+    }
+
+    .lastButtons{
+        font-size: var(--fontSize_mobilePhones);
+        padding: var(--padding_mobileAndSmallTablets);
+        border-radius: 10px;
+    }
+
+    #btnsBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+}
+
+/* Down here, the media querie for small tablets and devices with small screens */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    #resultBox{
+        width: 80%;
+        height: 70%;
+        gap: 30px;
+    }
+
+    #resultTexts{
+        gap: 20px;
+    }
+
+    #winnerResult{
+        font-size: var(--fontSize_smallTablets);
+    }
+
+    .lastButtons{
+        font-size: var(--fontSize_smallTablets);
+        padding: var(--padding_mobileAndSmallTablets);
+        border-radius: 10px;
+    }
+
+    #btnsBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    #resultBox{
+        width: 50%;
+        height: 60%;
+        gap: 30px;
+    }
+
+    #resultTexts{
+        gap: 20px;
+    }
+
+    #winnerResult{
+        font-size: var(--fontSize_laptops);
+    }
+
+    .lastButtons{
+        font-size: var(--fontSize_laptops);
+        padding: 3%;
+        border-radius: 10px;
+        
+    }
+
+    #btnsBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 70%;
+    }
+
 }
