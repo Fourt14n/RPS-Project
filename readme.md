@@ -7,7 +7,7 @@ Um jogo simples de pedra, papel e tesoura.
 <hr/>
 
 ## Acesse o projeto
-<p align="center">[Clique aqui](https://fourt14n.github.io/RPS-Project/)</p>
+[Clique aqui](https://fourt14n.github.io/RPS-Project/)
 
 ## Sobre o projeto
 O criei exclusivamente como uma forma de me desafiar e ter a oportunidade de aprender mais, apesar dos estresses e todas as dificuldades, consegui o finalizar.
