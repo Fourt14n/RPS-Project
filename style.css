@@ -129,7 +129,7 @@ Styling the hole box that contains the presentation of the website and its syste
     cursor: pointer;
 }
 .buttonBox:hover{
-    background-color: rgba(240, 248, 255, 0.31);
+    background-color: rgba(180, 181, 182, 0.31);
     
 }
 
@@ -163,7 +163,7 @@ Down here, styling the second screen of the website
 }
 
 .inputsButton:hover{
-    background-color: rgba(240, 248, 255, 0.148);
+    background-color: rgba(180, 181, 182, 0.31);
     cursor: pointer;
 }
 
@@ -174,7 +174,7 @@ Down here, styling the second screen of the website
 }
 
 .chooseButton:hover{
-    background-color: rgba(240, 248, 255, 0.148);
+    background-color: rgba(180, 181, 182, 0.31);
     border: 0.001px solid white;
     cursor: pointer;
 }
@@ -341,7 +341,7 @@ Down here, styling the second screen of the website
 }
 
 .lastButtons:hover{
-    background-color: rgba(240, 248, 255, 0.148);
+    background-color: rgba(180, 181, 182, 0.31);
     border: 0.001px solid white;
     cursor: pointer;
 }
